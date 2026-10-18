@@ -3,16 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cleanable – A cleaner Mac, beautifully</title>
-<meta name="description" content="Cleanable is a native macOS app that cleans junk, checks for threats, keeps your Mac maintained and shows what takes up space – in a calm, Liquid Glass design.">
+<title>Cleanable – Free Up Space on Your Mac, Beautifully</title>
+<meta name="description" content="Cleanable is a native Mac cleaner that frees up space, clears junk and caches, checks for threats and shows exactly what takes up space on your Mac – in a calm, Liquid Glass design.">
+<link rel="canonical" href="https://cleanable.app/">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#EEF1FA">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/app-icon.png">
-<meta property="og:title" content="Cleanable – A cleaner Mac, beautifully">
-<meta property="og:description" content="Clean junk, check for threats and keep your Mac in top shape. Native, private and beautifully simple.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cleanable">
+<meta property="og:title" content="Cleanable – Free Up Space on Your Mac, Beautifully">
+<meta property="og:description" content="Free up space, clean junk and keep your Mac in top shape. Native, private and beautifully simple.">
 <meta property="og:image" content="https://cleanable.app/assets/shot-smartcare.png">
-<meta property="og:url" content="https://cleanable.app">
+<meta property="og:url" content="https://cleanable.app/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cleanable – Free Up Space on Your Mac, Beautifully">
+<meta name="twitter:description" content="Free up space, clean junk and keep your Mac in top shape. Native, private and beautifully simple.">
+<meta name="twitter:image" content="https://cleanable.app/assets/shot-smartcare.png">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cleanable",
+    "alternateName": ["Cleanable.", "Cleanable for Mac"],
+    "url": "https://cleanable.app/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cleanable",
+    "url": "https://cleanable.app/",
+    "image": "https://cleanable.app/assets/app-icon.png",
+    "screenshot": "https://cleanable.app/assets/shot-smartcare.png",
+    "description": "A native Mac cleaner that frees up space, clears junk and caches, checks for threats and shows what takes up space on your Mac.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "macOS 14 or later",
+    "offers": [
+      { "@type": "Offer", "name": "Monthly", "price": "9.99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Yearly", "price": "39.99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Lifetime", "price": "89.99", "priceCurrency": "USD" }
+    ]
+  }
+]
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -223,6 +257,20 @@
   .trust .card { grid-column: auto; }
 
   /* ---------- Avslutning ---------- */
+  /* Priser */
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 980px; margin: 48px auto 0; }
+  .plan { position: relative; border-radius: var(--radius); padding: 30px 28px; text-align: left; display: flex; flex-direction: column; gap: 6px; }
+  .plan.value { outline: 2px solid var(--blue-soft); }
+  .plan.premium { background: linear-gradient(150deg, rgba(211, 204, 240, .75), rgba(255, 255, 255, .6) 45%, rgba(169, 189, 251, .45)); outline: 1.5px solid rgba(91, 124, 240, .35); }
+  .plan .badge { position: absolute; top: -12px; left: 24px; padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; background: var(--ink); color: #fff; }
+  .plan.premium .badge { background: linear-gradient(90deg, #fff, var(--lav)); color: var(--ink); box-shadow: 0 4px 12px -4px rgba(70, 86, 160, .4); }
+  .plan .tag { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+  .plan .price { font-size: 44px; font-weight: 700; letter-spacing: -.02em; margin: 6px 0 0; }
+  .plan .price small { font-size: 16px; font-weight: 500; color: var(--ink-3); }
+  .plan ul { list-style: none; padding: 0; margin: 14px 0 22px; color: var(--ink-2); font-size: 15px; line-height: 1.9; }
+  .plan ul li::before { content: "✓"; color: var(--blue); font-weight: 700; margin-right: 10px; }
+  .plan .btn { margin-top: auto; justify-content: center; }
+  .free-note { text-align: center; color: var(--ink-3); font-size: 14px; margin-top: 22px; }
   .final { text-align: center; border-radius: 36px; padding: 70px 30px; position: relative; overflow: hidden; }
   .final img { width: 96px; margin: 0 auto 24px; filter: drop-shadow(0 18px 24px rgba(70, 86, 160, .35)); }
   .final .lead { max-width: 560px; margin: 16px auto 0; }
@@ -264,6 +312,7 @@
     <a href="#features">Features</a>
     <a href="#tour">Tour</a>
     <a href="#privacy">Privacy</a>
+    <a href="#pricing">Pricing</a>
   </div>
   <a class="btn primary" href="#get">Get Cleanable</a>
 </nav>
@@ -304,7 +353,7 @@
         <article class="card glass wide reveal">
           <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 3v4M17 5h4"/></svg></div>
           <h3>Cleanup</h3>
-          <p>Reclaim space from caches, logs, Xcode build data, developer and AI model caches, mail attachments and the Trash.</p>
+          <p>Free up space by clearing caches, logs, Xcode build data, developer and AI model caches, mail attachments and the Trash.</p>
           <div class="tags"><span>System junk</span><span>Xcode</span><span>AI clutter</span><span>Mail</span></div>
         </article>
         <article class="card glass reveal">
@@ -384,6 +433,51 @@
     </div>
   </section>
 
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head reveal" style="text-align: center">
+        <div class="eyebrow">Pricing</div>
+        <h2>Scan for free. Clean with Pro.</h2>
+        <p class="lead" style="margin: 14px auto 0; max-width: 560px">Every scan, report and analysis in Cleanable. is free. Pro unlocks cleaning, uninstalling apps, removing launch items and deleting files.</p>
+      </div>
+      <div class="plans">
+        <article class="plan glass reveal">
+          <span class="tag">Monthly</span>
+          <p class="price">$9.99<small> / month</small></p>
+          <ul>
+            <li>All Pro features</li>
+            <li>Billed monthly</li>
+            <li>Cancel any time</li>
+          </ul>
+          <a class="btn ghost glass" data-plan="monthly" href="#pricing">Subscribe Monthly</a>
+        </article>
+        <article class="plan glass value reveal">
+          <span class="badge">Best value · Save 66%</span>
+          <span class="tag">Yearly</span>
+          <p class="price">$39.99<small> / year</small></p>
+          <ul>
+            <li>All Pro features</li>
+            <li>Just $3.33 a month</li>
+            <li>Save $79.89 a year vs. monthly</li>
+          </ul>
+          <a class="btn primary" data-plan="yearly" href="#pricing">Subscribe Yearly</a>
+        </article>
+        <article class="plan glass premium reveal">
+          <span class="badge">Premium</span>
+          <span class="tag">Lifetime</span>
+          <p class="price">$89.99<small> once</small></p>
+          <ul>
+            <li>All Pro features, for good</li>
+            <li>One payment, no renewals</li>
+            <li>One Mac, transferable any time</li>
+          </ul>
+          <a class="btn primary" data-plan="lifetime" href="#pricing">Buy Lifetime</a>
+        </article>
+      </div>
+      <p class="free-note reveal">Prices in USD. Subscriptions renew automatically until cancelled. Secure checkout by Lemon Squeezy. Your license key arrives by email – paste it into Cleanable. under Settings → License.</p>
+    </div>
+  </section>
+
   <section id="get" style="padding-top: 40px">
     <div class="wrap">
       <div class="final glass reveal">
@@ -405,6 +499,10 @@
 </footer>
 
 <script>
+  // Checkoutlänkar från Lemon Squeezy – fylls i av backend/scripts/ls_setup.sh
+  const CHECKOUT = { monthly: "", yearly: "", lifetime: "" };
+  document.querySelectorAll('[data-plan]').forEach((a) => { const url = CHECKOUT[a.dataset.plan]; if (url) a.href = url; });
+
   // Fade in vid scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
