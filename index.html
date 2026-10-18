@@ -500,7 +500,7 @@
 
 <script>
   // Checkoutlänkar från Lemon Squeezy – fylls i av backend/scripts/ls_setup.sh
-  const CHECKOUT = { monthly: "", yearly: "", lifetime: "" };
+  const CHECKOUT = { monthly: "https://cleanable.lemonsqueezy.com/checkout/custom/2a105260-2315-4ccb-b08b-f3e500f5bef6?signature=5754e40d1dc3a09f79e012ed3a96070b1de1165ddc87b015ba21f9d327fb7e67", yearly: "https://cleanable.lemonsqueezy.com/checkout/custom/4c9e20f5-5771-4062-bd45-4ccc6a55ffda?signature=c5660632908dba521d070cf282730187628d0ed3a1000722b5c4778c84228155", lifetime: "https://cleanable.lemonsqueezy.com/checkout/custom/e295e66b-a0b1-4a69-bc3e-dce269b48887?signature=910a5a606b3f2336d913237bb34f153ad52a7d02e9c90e3483537c6ca6afd17b" };
   document.querySelectorAll('[data-plan]').forEach((a) => { const url = CHECKOUT[a.dataset.plan]; if (url) a.href = url; });
 
   // Fade in vid scroll
